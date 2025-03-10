@@ -114,10 +114,10 @@ features might not work.
 | Name                                     | Node | Boot Node | Validator Client | Latest tested version |
 |------------------------------------------|:----:|:---------:|:----------------:|:---------------------:|
 | Grandine                                 |  ❔  |    ❔     |        ❔        |                       |
-| [Lighthouse](docs/clients/lighthouse.md) |  ✅  |    ✅     |        ✅        |        v5.3.0         |
+| [Lighthouse](docs/clients/lighthouse.md) |  ✅  |    ✅     |        ✅        | v5.3.0                |
 | Lodestar                                 |  ❔  |    ❔     |        ❔        |                       |
 | Nimbus                                   |  ❔  |    ❔     |        ❔        |                       |
-| Prysm                                    |  ❌  |    ❔     |        ❔        |                       |
+| Prysm                                    |  ✅  |    ❔     |        ❔        | v5.3.0                |
 | Teku                                     |  ❌  |    ❔     |        ❔        |                       |
 
 <!--- ANCHOR_END: supported-clients (for mdbook) -->
