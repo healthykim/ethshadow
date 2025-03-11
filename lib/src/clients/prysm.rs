@@ -61,6 +61,8 @@ impl Client for Prysm {
                 --p2p-udp-port {PORT} \
                 --p2p-host-ip {ip} \
                 --http-port {BEACON_API_PORT} \
+                --min-sync-peers 1 \
+                --minimum-peers-per-subnet 0 \
                 {} ",
             ctx.jwt_path().to_str().ok_or(Error::NonUTF8Path)?,
             ctx.cl_bootnode_enrs().join(" --bootstrap-node "),
