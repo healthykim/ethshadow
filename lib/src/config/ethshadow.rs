@@ -5,6 +5,7 @@ use crate::clients::lighthouse_bootnode::LighthouseBootnode;
 use crate::clients::lighthouse_vc::LighthouseValidatorClient;
 use crate::clients::prometheus::Prometheus;
 use crate::clients::prysm::Prysm;
+use crate::clients::prysm_vc::PrysmValidatorClient;
 use crate::clients::reth::Reth;
 use crate::clients::Client;
 use crate::config::one_or_many::OneOrMany;
@@ -349,6 +350,7 @@ impl EthShadowConfig {
         self.add_builtin_client("geth", Geth::default());
         self.add_builtin_client("reth", Reth::default());
         self.add_builtin_client("prysm", Prysm::default());
+        self.add_builtin_client("prysm_vc", PrysmValidatorClient::default());
         self.add_builtin_client("lighthouse", Lighthouse::default());
         self.add_builtin_client("lighthouse_vc", LighthouseValidatorClient::default());
         self.add_builtin_client("prometheus", Prometheus::default());
