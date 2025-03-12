@@ -1,6 +1,6 @@
 use crate::config::shadow::Process;
 use crate::node::{NodeInfo, SimulationContext};
-use crate::validators::Validator;
+use crate::validators::ValidatorSet;
 use crate::CowStr;
 use crate::Error;
 use serde::Deserialize;
@@ -19,6 +19,7 @@ pub mod lighthouse_bootnode;
 pub mod lighthouse_vc;
 pub mod prometheus;
 pub mod prysm;
+pub mod prysm_vc;
 pub mod reth;
 
 pub enum ValidatorDemand {
@@ -38,7 +39,7 @@ pub trait Client: Debug {
         &self,
         node: &NodeInfo<'a>,
         ctx: &mut SimulationContext<'a>,
-        validators: &[Validator],
+        validators: &ValidatorSet,
     ) -> Result<Process, Error>;
 
     fn validator_demand(&self) -> ValidatorDemand {
