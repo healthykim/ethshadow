@@ -127,7 +127,9 @@ impl ValidatorManager {
                 .arg("--source-min")
                 .arg(start.to_string())
                 .arg("--source-max")
-                .arg(end.to_string()),
+                .arg(end.to_string())
+                .arg("--prysm-pass")
+                .arg("12345678"),
         )?;
         if !status.success() {
             return Err(Error::ChildProcessFailure(self.image_name.to_string()));

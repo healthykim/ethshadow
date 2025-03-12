@@ -19,6 +19,7 @@ pub mod lighthouse_bootnode;
 pub mod lighthouse_vc;
 pub mod prometheus;
 pub mod prysm;
+pub mod prysm_vc;
 pub mod reth;
 
 pub enum ValidatorDemand {

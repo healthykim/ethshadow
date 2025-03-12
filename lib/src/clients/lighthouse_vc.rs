@@ -31,14 +31,8 @@ impl Client for LighthouseValidatorClient {
         if !dir.exists() {
             create_dir(&dir)?;
         }
-        fs::rename(
-            vs.base_path().join("secrets"),
-            dir.join("secrets"),
-        )?;
-        fs::rename(
-            vs.base_path().join("keys"),
-            dir.join("validators"),
-        )?;
+        fs::rename(vs.base_path().join("secrets"), dir.join("secrets"))?;
+        fs::rename(vs.base_path().join("keys"), dir.join("validators"))?;
 
         Ok(Process {
             path: self.common.executable_or("lighthouse"),

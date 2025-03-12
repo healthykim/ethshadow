@@ -30,6 +30,7 @@ cd lighthouse
 git checkout v5.3.0 # The latest tested version
 make
 make install-lcli
+cd ..
 
 # Geth
 git clone https://github.com/ethereum/go-ethereum.git
@@ -38,6 +39,7 @@ git checkout v1.14.11 # The latest tested version
 make all
 sudo cp build/bin/geth /usr/local/bin/geth # Make it globally accessible
 sudo cp build/bin/bootnode /usr/local/bin/bootnode # Make it globally accessible
+cd ..
 ```
 
 Install Shadow
@@ -48,6 +50,7 @@ cd shadow
 ./setup build --clean
 ./setup install
 echo 'export PATH="${PATH}:/home/${USER}/.local/bin"' >> ~/.bashrc && source ~/.bashrc
+cd ..
 ```
 
 Install Ethshadow.
@@ -55,6 +58,7 @@ Install Ethshadow.
 git clone https://github.com/ethereum/ethshadow.git
 cd ethshadow
 cargo install --path .
+cd ..
 ```
 
 Save the following file to a config file `myfirstsim.yaml`.
@@ -117,7 +121,7 @@ features might not work.
 | [Lighthouse](docs/clients/lighthouse.md) |  ✅  |    ✅     |        ✅        | v5.3.0                |
 | Lodestar                                 |  ❔  |    ❔     |        ❔        |                       |
 | Nimbus                                   |  ❔  |    ❔     |        ❔        |                       |
-| Prysm                                    |  ✅  |    ❔     |        ❔        | v5.3.0                |
+| [Prysm](docs/clients/prysm.md)           |  ✅  |    ❔     |        ✅        | v5.3.0                |
 | Teku                                     |  ❌  |    ❔     |        ❔        |                       |
 
 <!--- ANCHOR_END: supported-clients (for mdbook) -->
