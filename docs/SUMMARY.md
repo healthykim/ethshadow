@@ -6,6 +6,7 @@
 - [Supported Clients](supported-clients.md)
   - [Geth](clients/geth.md)
   - [Lighthouse](clients/lighthouse.md)
+  - [Prysm](clients/prysm.md)
 - [Getting Started](getting-started.md)
 - [Advanced Usage](advanced/index.md)
   - [Customize Client Settings](advanced/client-settings.md)
