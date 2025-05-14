@@ -7,7 +7,7 @@ use log::{debug, info};
 use serde_yaml::Value;
 use std::borrow::Cow;
 use std::ffi::{OsStr, OsString};
-use std::fs::{create_dir, File};
+use std::fs::{create_dir, remove_dir_all, File};
 use std::io::ErrorKind;
 use std::path::Path;
 use std::process::Command;
@@ -72,7 +72,9 @@ pub fn generate<T: TryInto<FullConfig, Error = Error>>(
     if let Err(e) = create_dir(output_path) {
         if e.kind() == ErrorKind::AlreadyExists {
             if !use_existing_dir {
-                return Err(Error::OutputFolderExists);
+                // TODO: remove this config (use_existing_dir is never true)
+                remove_dir_all(output_path).unwrap();
+                create_dir(output_path).unwrap();
             }
         } else {
             return Err(e.into());
